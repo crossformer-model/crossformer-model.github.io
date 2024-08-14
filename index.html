@@ -95,7 +95,7 @@
 <!-- <section class="hero teaser"> -->
     <div class="container is-max-desktop">
         <!-- <div class="hero-body"> -->
-            <video class="" id="home_vid" autoplay controls muted loop playsinline height="100%" width="100%" controls loop>
+            <video preload="auto" class="" id="home_vid" autoplay controls muted loop playsinline height="100%" width="100%" controls loop>
                 <source src="./static/videos/crossformer/homevid2.mp4"
                         type="video/mp4">
             </video>
@@ -397,13 +397,10 @@
 <!-- </footer> -->
 
 <script>
-  // var home_vid = document.getElementById('home_vid');
-  // home_vid.addEventListener('loadedmetadata', function() {
-  //   home_vid.playbackRate = 1.0;
-  // });
-  // home_vid.addEventListener('canplay', function() {
-  //   home_vid.play();
-  // });
+  var home_vid = document.getElementById('home_vid');
+  home_vid.addEventListener('canplay', function() {
+    home_vid.play();
+  });
   // Access the video element
   var nav_video = document.getElementById('nav_vid');
   nav_video.addEventListener('loadedmetadata', function() {
